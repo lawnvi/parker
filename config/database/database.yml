@@ -1,0 +1,21 @@
+debug:
+  type: mysql
+  host: localhost
+  port: 3306
+  user: root
+  password: 123456
+  name: parker_debug
+  config:
+    max_idle: 4
+    max_open: 8
+
+release:
+  type: mysql
+  host: localhost
+  port: 3306
+  user: root
+  password: 123456
+  name: parker_release
+  config:
+    max_idle: 4
+    max_open: 8
