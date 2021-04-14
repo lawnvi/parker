@@ -1,7 +1,6 @@
 package spider
 
 import (
-	"github.com/gocolly/colly"
 	"parker/model"
 )
 
@@ -12,13 +11,13 @@ type ProjectSpider interface {
 	SearchByName(name string) []model.Project
 	//researcher name+company
 	SearchByResearcher(researcher model.Researcher) []model.Project
-	//解析成对象
-	toProjects(html colly.HTMLElement) []model.Project
 }
 
 //期刊爬虫接口
 type JournalSpider interface {
-
+	//搜索
+	SearchByISSN(no string) model.Journal
+	SearchByName(name string) []model.Journal
 }
 
 //论文爬虫接口
